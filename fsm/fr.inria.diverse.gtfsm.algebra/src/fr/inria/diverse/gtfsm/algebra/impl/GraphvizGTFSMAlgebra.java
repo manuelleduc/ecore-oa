@@ -6,6 +6,9 @@ import fr.inria.diverse.algebras.expressions.GraphvizExp;
 import fr.inria.diverse.algebras.expressions.RepGraphvizExp;
 import fr.inria.diverse.gfsm.impl.GraphvizGFSMAlgebra;
 import fr.inria.diverse.tfsm.algebra.impl.GraphvizTFSMAlgebra;
+import fsm.FSM;
+import fsm.State;
+import fsm.Transition;
 import gtfsm.GTFSM;
 import gtfsm.GTFinalState;
 import gtfsm.GTInitialState;
@@ -88,6 +91,27 @@ GtfsmAlgebra<RepGraphvizExp, GraphvizExp, RepGraphvizExp, RepGraphvizExp, Graphv
 	@Override
 	default RepGraphvizExp gTTransition(final GTTransition gtTransition) {
 		return this.gTransition(gtTransition);
+	}
+	
+	@Override
+	default RepGraphvizExp $(Transition transition) {
+		return GtfsmAlgebra.super.$(transition);
+	}
+
+	@Override
+	default RepGraphvizExp $(State state) {
+		return GtfsmAlgebra.super.$(state);
+	}
+
+	@Override
+	default RepGraphvizExp $(FSM fSM) {
+		return GtfsmAlgebra.super.$(fSM);
+	}
+
+	@Override
+	default RepGraphvizExp transition(Transition transition) {
+		// TODO Auto-generated method stub
+		return GraphvizGFSMAlgebra.super.transition(transition);
 	}
 
 }

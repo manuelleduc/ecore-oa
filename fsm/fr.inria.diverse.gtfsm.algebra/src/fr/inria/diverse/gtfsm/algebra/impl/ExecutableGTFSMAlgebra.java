@@ -14,6 +14,8 @@ import fr.inria.diverse.fsm.algebra.exprs.CtxExecutableExp;
 import fr.inria.diverse.fsm.algebra.exprs.ExecutableExp;
 import fr.inria.diverse.gfsm.impl.ExecutableGFSMAlgebra;
 import fr.inria.diverse.tfsm.algebra.impl.ExecutableTFSMAlgebra;
+import fsm.FSM;
+import fsm.State;
 import fsm.Transition;
 import gfsm.GTransition;
 import gtfsm.GTFSM;
@@ -27,7 +29,6 @@ import tfsm.TimedFSM;
 import tfsm.TimedTransition;
 
 public interface ExecutableGTFSMAlgebra extends
-//ExecutableExp, ExecutableExp, ExecutableExp, Void, Boolean, CtxExecutableExp, CtxEvalExp<Integer, Boolean>, CtxEvalExp<Integer, Integer>, EvalOpExp<Integer>
 		GtfsmAlgebra<Boolean, CtxEvalExp<Integer, Boolean>, Void, CtxExecutableExp, CtxEvalExp<Integer, Integer>, ExecutableExp, ExecutableExp, ExecutableExp,EvalOpExp<Integer> >,
 		ExecutableTFSMAlgebra, ExecutableGFSMAlgebra {
 
@@ -127,6 +128,21 @@ public interface ExecutableGTFSMAlgebra extends
 	@Override
 	default ExecutableExp gTTransition(final GTTransition gtTransition) {
 		return null;
+	}
+
+	@Override
+	default ExecutableExp $(Transition transition) {
+		return GtfsmAlgebra.super.$(transition);
+	}
+
+	@Override
+	default ExecutableExp $(State state) {
+		return GtfsmAlgebra.super.$(state);
+	}
+
+	@Override
+	default ExecutableExp $(FSM fSM) {
+		return GtfsmAlgebra.super.$(fSM);
 	}
 
 }

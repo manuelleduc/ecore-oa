@@ -18,6 +18,12 @@ import tfsm.TimedTransition
 import tfsm.UpperClockConstraint
 import tfsm.UpperEqualClockConstraint
 import tfsm.algebra.TfsmAlgebra
+import fsm.*
+import fsm.Transition
+import fsm.State
+import fsm.FinalState
+import fsm.InitialState
+import fsm.FSM
 
 // find out a solution to overload types defined at an upper level at the level of the arguments (here timedActions vs userinput)
 interface ExecutableTFSMAlgebra extends TfsmAlgebra<Boolean, Void, CtxExecutableExp, ExecutableExp, ExecutableExp, ExecutableExp>, ExecutableFSMAlgebra {
@@ -133,5 +139,39 @@ interface ExecutableTFSMAlgebra extends TfsmAlgebra<Boolean, Void, CtxExecutable
 	override orClockConstraint(OrClockConstraint orClockConstraint) {
 		$(orClockConstraint.left) || $(orClockConstraint.right)
 	}
+	
+	override $(FSM fSM) {
+		TfsmAlgebra.super.$(fSM)
+	}
+	
+	override $(State state) {
+		TfsmAlgebra.super.$(state)
+	}
+	
+	override $(Transition transition) {
+		TfsmAlgebra.super.$(transition)
+	}
+	
+	override transition(Transition transition) {
+		ExecutableFSMAlgebra.super.transition(transition)
+	}
+	
+	override state(State state) {
+		ExecutableFSMAlgebra.super.state(state)
+	}
+	
+	override finalState(FinalState finalState) {
+		ExecutableFSMAlgebra.super.finalState(finalState)
+	}
+
+	
+	override initialState(InitialState initialState) {
+		ExecutableFSMAlgebra.super.initialState(initialState)
+	}
+	
+	override fSM(FSM fsm) {
+		ExecutableFSMAlgebra.super.fSM(fsm)
+	}
+	
 
 }

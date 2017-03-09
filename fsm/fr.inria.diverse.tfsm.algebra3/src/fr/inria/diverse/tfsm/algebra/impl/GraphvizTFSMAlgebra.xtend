@@ -16,6 +16,11 @@ import tfsm.TimedTransition
 import tfsm.UpperClockConstraint
 import tfsm.UpperEqualClockConstraint
 import tfsm.algebra.TfsmAlgebra
+import fsm.FSM
+import fsm.State
+import fsm.Transition
+import fsm.FinalState
+import fsm.InitialState
 
 interface GraphvizTFSMAlgebra extends GraphvizFSMAlgebra, TfsmAlgebra<RepGraphvizExp, RepGraphvizExp, RepGraphvizExp, RepGraphvizExp, RepGraphvizExp, RepGraphvizExp> {
 
@@ -97,6 +102,38 @@ interface GraphvizTFSMAlgebra extends GraphvizFSMAlgebra, TfsmAlgebra<RepGraphvi
 
 	override orClockConstraint(OrClockConstraint orClockConstraint) {
 		[rep|'''(«$(orClockConstraint.left).result(rep)» OR «$(orClockConstraint.right).result(rep)»)''']
+	}
+	
+	override $(FSM fSM) {
+		TfsmAlgebra.super.$(fSM)
+	}
+	
+	override $(State state) {
+		TfsmAlgebra.super.$(state)
+	}
+	
+	override $(Transition transition) {
+		TfsmAlgebra.super.$(transition)
+	}
+	
+	override fSM(FSM fsm) {
+		GraphvizFSMAlgebra.super.fSM(fsm)
+	}
+	
+	override finalState(FinalState finalState) {
+		GraphvizFSMAlgebra.super.finalState(finalState)
+	}
+	
+	override initialState(InitialState initialState) {
+		GraphvizFSMAlgebra.super.initialState(initialState)
+	}
+	
+	override state(State state) {
+		GraphvizFSMAlgebra.super.state(state)
+	}
+	
+	override transition(Transition transition) {
+		GraphvizFSMAlgebra.super.transition(transition)
 	}
 
 }
