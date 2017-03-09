@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="ASCII"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/fr.inria.diverse.tfsm.melange/src-gen" modelPluginID="fr.inria.diverse.tfsm.melange" modelName="GFSMLMT" complianceLevel="7.0" copyrightFields="false">
+  <foreignModel>platform:/resource/fr.inria.diverse.tfsm.melange/model-gen/GFSMLMT.ecore</foreignModel>
+  <genPackages prefix="Gfsm" basePackage="fr.inria.diverse.tfsm.melange.gfsmlmt" disposableProviderFactory="true">
+    <ecorePackage href="GFSMLMT.ecore#/0"/>
+    <genClasses>
+      <ecoreClass href="GFSMLMT.ecore#/0/GTransition"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="GFSMLMT.ecore#/0/GTransition/guard"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="GFSMLMT.ecore#/0/GState"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="GFSMLMT.ecore#/0/GState/inExpression"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="GFSMLMT.ecore#/0/GState/outExpression"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="GFSMLMT.ecore#/0/GInitialState"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="GFSMLMT.ecore#/0/GFinalState"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="GFSMLMT.ecore#/0/GFSM"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Fsm" basePackage="fr.inria.diverse.tfsm.melange.gfsmlmt" disposableProviderFactory="true">
+    <ecorePackage href="GFSMLMT.ecore#/1"/>
+    <genClasses>
+      <ecoreClass href="GFSMLMT.ecore#/1/FSM"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="GFSMLMT.ecore#/1/FSM/states"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="GFSMLMT.ecore#/1/FSM/transitions"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="GFSMLMT.ecore#/1/FSM/initialstate"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="GFSMLMT.ecore#/1/FSM/name"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="GFSMLMT.ecore#/1/InitialState"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="GFSMLMT.ecore#/1/State"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="GFSMLMT.ecore#/1/State/name"/>
+      </genFeatures>
+      <genFeatures property="None" notify="false" createChild="false">
+        <ecoreFeature xsi:type="ecore:EReference" href="GFSMLMT.ecore#/1/State/fsm"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="GFSMLMT.ecore#/1/State/outgoingtransitions"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="GFSMLMT.ecore#/1/State/incommingtransitions"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="GFSMLMT.ecore#/1/FinalState"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="GFSMLMT.ecore#/1/Transition"/>
+      <genFeatures property="None" notify="false" createChild="false">
+        <ecoreFeature xsi:type="ecore:EReference" href="GFSMLMT.ecore#/1/Transition/fsm"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="GFSMLMT.ecore#/1/Transition/from"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="GFSMLMT.ecore#/1/Transition/to"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="GFSMLMT.ecore#/1/Transition/event"/>
+      </genFeatures>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Expression" basePackage="fr.inria.diverse.tfsm.melange.gfsmlmt" disposableProviderFactory="true">
+    <ecorePackage href="GFSMLMT.ecore#/2"/>
+    <genClasses image="false">
+      <ecoreClass href="GFSMLMT.ecore#/2/IntBinaryExpression"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="GFSMLMT.ecore#/2/IntBinaryExpression/expression1"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="GFSMLMT.ecore#/2/IntBinaryExpression/expression2"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="GFSMLMT.ecore#/2/IntAdd"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="GFSMLMT.ecore#/2/IntMult"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="GFSMLMT.ecore#/2/IntNeg"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="GFSMLMT.ecore#/2/IntNeg/expression"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="GFSMLMT.ecore#/2/IntVarRef"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="GFSMLMT.ecore#/2/IntVarRef/name"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="GFSMLMT.ecore#/2/ConstExpr"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="GFSMLMT.ecore#/2/ConstExpr/value"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses image="false">
+      <ecoreClass href="GFSMLMT.ecore#/2/BooleanExpression"/>
+    </genClasses>
+    <genClasses image="false">
+      <ecoreClass href="GFSMLMT.ecore#/2/IntOperation"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="GFSMLMT.ecore#/2/IntVarAssign"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="GFSMLMT.ecore#/2/IntVarAssign/name"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="GFSMLMT.ecore#/2/IntVarAssign/expression"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="GFSMLMT.ecore#/2/IntBlock"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="GFSMLMT.ecore#/2/IntBlock/operations"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="GFSMLMT.ecore#/2/BooleanEqual"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="GFSMLMT.ecore#/2/BooleanOr"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="GFSMLMT.ecore#/2/BooleanAnd"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="GFSMLMT.ecore#/2/BooleanGreaterThan"/>
+    </genClasses>
+    <genClasses image="false">
+      <ecoreClass href="GFSMLMT.ecore#/2/BooleanBinaryExpression"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="GFSMLMT.ecore#/2/BooleanBinaryExpression/boolExpression1"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="GFSMLMT.ecore#/2/BooleanBinaryExpression/boolExpression2"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses image="false">
+      <ecoreClass href="GFSMLMT.ecore#/2/BooleanCompareExpression"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="GFSMLMT.ecore#/2/BooleanCompareExpression/expression1"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="GFSMLMT.ecore#/2/BooleanCompareExpression/expression2"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses image="false">
+      <ecoreClass href="GFSMLMT.ecore#/2/IntExpression"/>
+    </genClasses>
+  </genPackages>
+  <usedGenPackages href="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"/>
+</genmodel:GenModel>

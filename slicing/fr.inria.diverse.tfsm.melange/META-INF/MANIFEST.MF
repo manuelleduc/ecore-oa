@@ -1,0 +1,39 @@
+Bundle-SymbolicName: fr.inria.diverse.tfsm.melange; singleton:=true
+Export-Package: fr.inria.diverse.tfsm.melange.tfsmmt.tfsm.impl,fr.inria.diverse.tfsm.melange.tfsmmt.tfsm.util,fr.inria.diverse.tfsm.melange.tfsmmt.fsm,fr.inria.diverse.tfsm.melange.tfsmmt.fsm.impl,fr.inria.diverse.tfsm.melange.tfsmmt.tfsm,fr.inria.diverse.tfsm.melange.tfsmmt.fsm.util,fr.inria.diverse.tfsm.melange.tfsmslicedmt.fsm.util,fr.inria.diverse.tfsm.melange.tfsmslicedmt.fsm.impl,fr.inria.diverse.tfsm.melange.tfsmslicedmt.tfsm.impl,fr.inria.diverse.tfsm.melange.tfsmslicedmt.tfsm.util,fr.inria.diverse.tfsm.melange.tfsmslicedmt.fsm,fr.inria.diverse.tfsm.melange.tfsmslicedmt.tfsm,fr.inria.diverse.tfsm.melange.tfsm.adapters.tfsmslicedmt,fr.inria.diverse.tfsm.melange.tfsmsliced.adapters.tfsmslicedmt.tfsm,fr.inria.diverse.tfsm.melange,fr.inria.diverse.tfsm.melange.tfsm.adapters.tfsmmt,fr.inria.diverse.tfsm.melange.tfsm.adapters.tfsmmt.tfsm,fr.inria.diverse.tfsm.melange.tfsmsliced.adapters.tfsmslicedmt,fr.inria.diverse.tfsm.melange.tfsm.adapters.tfsmmt.fsm,fr.inria.diverse.tfsm.melange.tfsmsliced.adapters.tfsmslicedmt.fsm,fr.inria.diverse.tfsm.melange.tfsm.adapters.tfsmslicedmt.fsm,fr.inria.diverse.tfsm.melange.tfsm.adapters.tfsmslicedmt.tfsm,fr.inria.diverse.tfsm.melange.fsmmt.fsm.util,fr.inria.diverse.tfsm.melange.fsmmt.fsm.impl,fr.inria.diverse.tfsm.melange.fsmmt.fsm,fr.inria.diverse.tfsm.melange.fsm.adapters.fsmmt,fr.inria.diverse.tfsm.melange.fsm.adapters.fsmmt.fsm,fr.inria.diverse.tfsm.melange.tfsm.adapters.fsmmt,fr.inria.diverse.tfsm.melange.tfsm.adapters.fsmmt.fsm,fr.inria.diverse.tfsm.melange.fsmlmt.fsm.impl,fr.inria.diverse.tfsm.melange.fsmlmt.fsm.util,fr.inria.diverse.tfsm.melange.fsmlmt.fsm,fr.inria.diverse.tfsm.melange.tfsm.adapters.fsmlmt,fr.inria.diverse.tfsm.melange.tfsm.adapters.fsmlmt.fsm,fr.inria.diverse.tfsm.melange.fsml.adapters.fsmlmt,fr.inria.diverse.tfsm.melange.fsml.adapters.fsmlmt.fsm
+Bundle-Name: fr.inria.diverse.tfsm.melange
+Bundle-Version: 1.0.0
+Bundle-ClassPath: .
+Require-Bundle: org.eclipse.xtend.lib;bundle-version="2.7.0";visibility:="private",
+ 
+ org.eclipse.xtext.xbase.lib;bundle-version="2.7.0";visibility:="private",
+ 
+ com.google.guava;bundle-version="0.0.0";visibility:="private",
+ 
+ org.eclipse.emf.ecore.xmi;bundle-version="2.8.0";visibility:="reexport",
+ 
+ org.eclipse.emf.ecore;bundle-version="2.8.0";visibility:="reexport",
+ 
+ org.eclipse.emf.common;bundle-version="2.8.0";visibility:="reexport",
+ 
+ fr.inria.diverse.melange.lib;bundle-version="0.1.0";visibility:="reexport",
+ 
+ fr.inria.diverse.melange.resource;bundle-version="0.1.0";visibility:="reexport",
+ 
+ fr.inria.diverse.melange.adapters;bundle-version="0.1.0";visibility:="reexport",
+ 
+ fr.inria.diverse.k3.al.annotationprocessor.plugin;bundle-version="0.0.0";visibility:="reexport",
+ 
+ fr.inria.diverse.tfsm.ecore;bundle-version="0.0.0";visibility:="private",
+ 
+ fr.inria.diverse.tfsm.melange.tfsm,
+ 
+ fr.inria.diverse.tfsm.melange.fsm,
+ 
+ fr.inria.diverse.tfsm.melange.tfsmsliced,
+ 
+ fr.inria.diverse.tfsm.melange.fsml,
+ 
+ fr.inria.diverse.expression.model;bundle-version=0.0.0;visibility:=reexport
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Manifest-Version: 1.0

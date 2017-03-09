@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ASCII"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/fr.inria.diverse.tfsm.melange/src-gen" modelPluginID="fr.inria.diverse.tfsm.melange" modelName="FSMlMT" complianceLevel="7.0" copyrightFields="false">
+  <foreignModel>platform:/resource/fr.inria.diverse.tfsm.melange/model-gen/FSMlMT.ecore</foreignModel>
+  <genPackages prefix="Fsm" basePackage="fr.inria.diverse.tfsm.melange.fsmlmt" disposableProviderFactory="true">
+    <ecorePackage href="FSMlMT.ecore#/"/>
+    <genClasses>
+      <ecoreClass href="FSMlMT.ecore#//FSM"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="FSMlMT.ecore#//FSM/states"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="FSMlMT.ecore#//FSM/transitions"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="FSMlMT.ecore#//FSM/initialstate"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="FSMlMT.ecore#//FSM/name"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="FSMlMT.ecore#//InitialState"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="FSMlMT.ecore#//State"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="FSMlMT.ecore#//State/name"/>
+      </genFeatures>
+      <genFeatures property="None" notify="false" createChild="false">
+        <ecoreFeature xsi:type="ecore:EReference" href="FSMlMT.ecore#//State/fsm"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="FSMlMT.ecore#//State/outgoingtransitions"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="FSMlMT.ecore#//State/incommingtransitions"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="FSMlMT.ecore#//FinalState"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="FSMlMT.ecore#//Transition"/>
+      <genFeatures property="None" notify="false" createChild="false">
+        <ecoreFeature xsi:type="ecore:EReference" href="FSMlMT.ecore#//Transition/fsm"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="FSMlMT.ecore#//Transition/from"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="FSMlMT.ecore#//Transition/to"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="FSMlMT.ecore#//Transition/event"/>
+      </genFeatures>
+    </genClasses>
+  </genPackages>
+  <usedGenPackages href="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"/>
+</genmodel:GenModel>

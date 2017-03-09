@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="ASCII"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/fr.inria.diverse.tfsm.melange/src-gen" modelPluginID="fr.inria.diverse.tfsm.melange" modelName="ExpressionLMT" complianceLevel="7.0" copyrightFields="false">
+  <foreignModel>platform:/resource/fr.inria.diverse.tfsm.melange/model-gen/ExpressionLMT.ecore</foreignModel>
+  <genPackages prefix="Expression" basePackage="fr.inria.diverse.tfsm.melange.expressionlmt" disposableProviderFactory="true">
+    <ecorePackage href="ExpressionLMT.ecore#/"/>
+    <genClasses image="false">
+      <ecoreClass href="ExpressionLMT.ecore#//IntBinaryExpression"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="ExpressionLMT.ecore#//IntBinaryExpression/expression1"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="ExpressionLMT.ecore#//IntBinaryExpression/expression2"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="ExpressionLMT.ecore#//IntAdd"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="ExpressionLMT.ecore#//IntMult"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="ExpressionLMT.ecore#//IntNeg"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="ExpressionLMT.ecore#//IntNeg/expression"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="ExpressionLMT.ecore#//IntVarRef"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="ExpressionLMT.ecore#//IntVarRef/name"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="ExpressionLMT.ecore#//ConstExpr"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="ExpressionLMT.ecore#//ConstExpr/value"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses image="false">
+      <ecoreClass href="ExpressionLMT.ecore#//BooleanExpression"/>
+    </genClasses>
+    <genClasses image="false">
+      <ecoreClass href="ExpressionLMT.ecore#//IntOperation"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="ExpressionLMT.ecore#//IntVarAssign"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="ExpressionLMT.ecore#//IntVarAssign/name"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="ExpressionLMT.ecore#//IntVarAssign/expression"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="ExpressionLMT.ecore#//IntBlock"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="ExpressionLMT.ecore#//IntBlock/operations"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="ExpressionLMT.ecore#//BooleanEqual"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="ExpressionLMT.ecore#//BooleanOr"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="ExpressionLMT.ecore#//BooleanAnd"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="ExpressionLMT.ecore#//BooleanGreaterThan"/>
+    </genClasses>
+    <genClasses image="false">
+      <ecoreClass href="ExpressionLMT.ecore#//BooleanBinaryExpression"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="ExpressionLMT.ecore#//BooleanBinaryExpression/boolExpression1"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="ExpressionLMT.ecore#//BooleanBinaryExpression/boolExpression2"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses image="false">
+      <ecoreClass href="ExpressionLMT.ecore#//BooleanCompareExpression"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="ExpressionLMT.ecore#//BooleanCompareExpression/expression1"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="ExpressionLMT.ecore#//BooleanCompareExpression/expression2"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses image="false">
+      <ecoreClass href="ExpressionLMT.ecore#//IntExpression"/>
+    </genClasses>
+  </genPackages>
+  <usedGenPackages href="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"/>
+</genmodel:GenModel>

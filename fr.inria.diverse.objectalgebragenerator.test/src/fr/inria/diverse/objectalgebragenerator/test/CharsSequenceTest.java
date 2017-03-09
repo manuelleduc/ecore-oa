@@ -49,5 +49,6 @@ public class CharsSequenceTest {
 	public void testAAAA() throws Exception {
 		Assert.assertEquals("AAAA", charsSequence.generateString(18278));
 	}
+	
 
 }

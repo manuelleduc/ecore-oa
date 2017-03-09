@@ -49,7 +49,7 @@ public class UnitTests {
 	public void wShapedInheritance() throws Exception {
 		testCompare("wShapedInheritance");
 	}
-	
+
 	@Test
 	public void packageB() throws Exception {
 		testCompare("packageB");
@@ -102,5 +102,18 @@ public class UnitTests {
 		final String expected = Files.readAllLines(new File(ROOT_PATH + "/results/" + file + ".java").toPath()).stream()
 				.collect(Collectors.joining("\n"));
 		assertEquals(expected, fileContent);
+	}
+
+	@Test
+	public void testSimpleExpr() {
+		final URI uri = URI.createFileURI("/home/mleduc/dev/ecore/simpleexpression/fr.inria.diverse.simpleexpression.embedded.model/model/simpleexpression.ecore");
+
+		final ResourceSetImpl resourceSet = new ResourceSetImpl();
+		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("ecore", new XMIResourceFactoryImpl());
+		final Resource resource = resourceSet.getResource(uri, true);
+		final EPackage ePackage = (EPackage) resource.getContents().get(0);
+		final String fileContent = new GenerateAlgebra().processAlgebra(ePackage);
+		System.out.println(fileContent);
+		
 	}
 }

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?eclipse version="3.4"?><plugin>
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <!-- @generated TFSMMT -->
+    <package class="fr.inria.diverse.tfsm.melange.tfsmmt.fsm.FsmPackage" genModel="model-gen/TFSMMT.genmodel" uri="http://fr.inria.diverse.tfsm.melange.tfsmmt/fsm/"/>
+  </extension>
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <!-- @generated TFSMMT -->
+    <package class="fr.inria.diverse.tfsm.melange.tfsmmt.tfsm.TfsmPackage" genModel="model-gen/TFSMMT.genmodel" uri="http://fr.inria.diverse.tfsm.melange.tfsmmt/tfsm/"/>
+  </extension>
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <!-- @generated FSMMT -->
+    <package class="fr.inria.diverse.tfsm.melange.fsmmt.fsm.FsmPackage" genModel="model-gen/FSMMT.genmodel" uri="http://fr.inria.diverse.tfsm.melange.fsmmt/fsm/"/>
+  </extension>
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <!-- @generated TFSMSlicedMT -->
+    <package class="fr.inria.diverse.tfsm.melange.tfsmslicedmt.fsm.FsmPackage" genModel="model-gen/TFSMSlicedMT.genmodel" uri="http://fr.inria.diverse.tfsm.melange.tfsmslicedmt/fsm/"/>
+  </extension>
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <!-- @generated TFSMSlicedMT -->
+    <package class="fr.inria.diverse.tfsm.melange.tfsmslicedmt.tfsm.TfsmPackage" genModel="model-gen/TFSMSlicedMT.genmodel" uri="http://fr.inria.diverse.tfsm.melange.tfsmslicedmt/tfsm/"/>
+  </extension>
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <!-- @generated FSMlMT -->
+    <package class="fr.inria.diverse.tfsm.melange.fsmlmt.fsm.FsmPackage" genModel="model-gen/FSMlMT.genmodel" uri="http://fr.inria.diverse.tfsm.melange.fsmlmt/fsm/"/>
+  </extension>
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <!-- @generated ExpressionLMT -->
+    <package class="fr.inria.diverse.tfsm.melange.expressionlmt.expression.ExpressionPackage" genModel="model-gen/ExpressionLMT.genmodel" uri="http://fr.inria.diverse.tfsm.melange.expressionlmt/expression/"/>
+  </extension>
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <!-- @generated GFSMLMT -->
+    <package class="fr.inria.diverse.tfsm.melange.gfsmlmt.expression.ExpressionPackage" genModel="model-gen/GFSMLMT.genmodel" uri="http://fr.inria.diverse.tfsm.melange.gfsmlmt/expression/"/>
+  </extension>
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <!-- @generated GFSMLMT -->
+    <package class="fr.inria.diverse.tfsm.melange.gfsmlmt.fsm.FsmPackage" genModel="model-gen/GFSMLMT.genmodel" uri="http://fr.inria.diverse.tfsm.melange.gfsmlmt/fsm/"/>
+  </extension>
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <!-- @generated GFSMLMT -->
+    <package class="fr.inria.diverse.tfsm.melange.gfsmlmt.gfsm.GfsmPackage" genModel="model-gen/GFSMLMT.genmodel" uri="http://fr.inria.diverse.tfsm.melange.gfsmlmt/gfsm/"/>
+  </extension>
+  
+<extension point="fr.inria.diverse.melange.modeltype">
+    <modeltype id="fr.inria.diverse.tfsm.melange.FSMlMT" uri="http://fr.inria.diverse.tfsm.melange.fsmlmt/"/>
+    <modeltype id="fr.inria.diverse.tfsm.melange.ExpressionLMT" uri="http://fr.inria.diverse.tfsm.melange.expressionlmt/"/>
+    <modeltype id="fr.inria.diverse.tfsm.melange.GFSMLMT" uri="http://fr.inria.diverse.tfsm.melange.gfsmlmt/">
+      <subtyping modeltypeId="fr.inria.diverse.tfsm.melange.FSMlMT"/>
+      <subtyping modeltypeId="fr.inria.diverse.tfsm.melange.ExpressionLMT"/>
+    </modeltype>
+  </extension>
+  <extension point="fr.inria.diverse.melange.language">
+    <language aspects="" entryPoints="" exactType="fr.inria.diverse.tfsm.melange.FSMlMT" id="fr.inria.diverse.tfsm.melange.FSMl" uri="http://fr.inria.diverse.tfsm.melange.fsml/fsm/">
+      <adapter class="fr.inria.diverse.tfsm.melange.fsml.adapters.fsmlmt.FSMlAdapter" modeltypeId="fr.inria.diverse.tfsm.melange.FSMlMT"/>
+    </language>
+    <language aspects="" entryPoints="" exactType="fr.inria.diverse.tfsm.melange.ExpressionLMT" id="fr.inria.diverse.tfsm.melange.ExpressionL" uri="http://fr.inria.diverse.tfsm.melange.expressionl/expression/">
+      <adapter class="fr.inria.diverse.tfsm.melange.expressionl.adapters.expressionlmt.ExpressionLAdapter" modeltypeId="fr.inria.diverse.tfsm.melange.ExpressionLMT"/>
+    </language>
+    <language aspects="" entryPoints="" exactType="fr.inria.diverse.tfsm.melange.GFSMLMT" id="fr.inria.diverse.tfsm.melange.GFSML" uri="http://fr.inria.diverse.tfsm.melange.gfsml/gfsm/">
+      <adapter class="fr.inria.diverse.tfsm.melange.gfsml.adapters.fsmlmt.GFSMLAdapter" modeltypeId="fr.inria.diverse.tfsm.melange.FSMlMT"/>
+      <adapter class="fr.inria.diverse.tfsm.melange.gfsml.adapters.expressionlmt.GFSMLAdapter" modeltypeId="fr.inria.diverse.tfsm.melange.ExpressionLMT"/>
+      <adapter class="fr.inria.diverse.tfsm.melange.gfsml.adapters.gfsmlmt.GFSMLAdapter" modeltypeId="fr.inria.diverse.tfsm.melange.GFSMLMT"/>
+    </language>
+  </extension>
+</plugin>

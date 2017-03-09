@@ -1,0 +1,28 @@
+package fr.inria.diverse.tfsm.melange
+
+//language TFSM {
+//	syntax "platform:/resource/fr.inria.diverse.tfsm.ecore/model/tfsm.ecore"	
+//	exactType TFSMMT
+//}
+
+language FSMl {
+	syntax "platform:/resource/fr.inria.diverse.fsm.model/model/fsm.ecore"	
+	exactType FSMlMT
+}
+
+language ExpressionL {
+	syntax "platform:/resource/fr.inria.diverse.expression.model/model/expression.ecore"
+	exactType ExpressionLMT
+}
+
+language GFSML {
+	syntax "platform:/resource/fr.inria.diverse.gfsm.model/model/gfsm.ecore"
+	merge FSMl
+	merge ExpressionL
+}
+
+
+//language TFSMSliced {
+//	slice TFSM on 
+//		["TimedFSM"]
+//}

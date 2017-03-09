@@ -87,26 +87,17 @@ class GenerateAlgebra {
 
 			«ENDFOR»
 			«FOR abstractTypes : all$Types.entrySet SEPARATOR '\n'»
-			«IF abstractTypes.value.getDirectPackages(ePackage).size > 0»@Override«ENDIF»
-			
-			Map<«abstractTypes.value.findRootType.name», «abstractTypes.key»> get«abstractTypes.value.findRootType.name»Memo();
-			
+			«IF abstractTypes.value.getDirectPackages(ePackage).size > 0»@Override«ENDIF»			
 			public default «abstractTypes.key» $(final «abstractTypes.value.findRootType.name» «abstractTypes.value.findRootType.name.toFirstLower») {
 				final «abstractTypes.key» ret;
-				Map<«abstractTypes.value.findRootType.name», «abstractTypes.key»> memo = get«abstractTypes.value.findRootType.name»Memo();
-				if(memo.containsKey(«abstractTypes.value.findRootType.name.toFirstLower»)) {
-					ret = memo.get(«abstractTypes.value.findRootType.name.toFirstLower»);
-				} else {
-					«FOR type : abstractTypes.concretTypes(ePackage).map[elem].sortBy[name] BEFORE 'if' SEPARATOR ' else if' AFTER ''» («abstractTypes.value.findRootType.name.toFirstLower».eClass().getName().equals("«type.name»")) {
-						ret = this.«type.name.toFirstLower»((«type.name») «abstractTypes.value.findRootType.name.toFirstLower»);
-					}«ENDFOR» else {
-					«IF abstractTypes.value.getDirectPackages(ePackage).size > 0»
-						«abstractTypes.value.getDirectPackages(ePackage).toTryCatch(abstractTypes.value.findRootType.name.toFirstLower)»
-					«ELSE»
-									«'\t'»throw new RuntimeException("Unknow «abstractTypes.value.findRootType.name» " + «abstractTypes.value.findRootType.name.toFirstLower»);
-					«ENDIF»
-				}
-					memo.put(«abstractTypes.value.findRootType.name.toFirstLower», ret);
+				«FOR type : abstractTypes.concretTypes(ePackage).map[elem].sortBy[name] BEFORE 'if' SEPARATOR ' else if' AFTER ''» («abstractTypes.value.findRootType.name.toFirstLower».eClass().getClassifierID() == AAAAAPackage.«type.name.toUpperCase») {
+					ret = this.«type.name.toFirstLower»((«type.name») «abstractTypes.value.findRootType.name.toFirstLower»);
+				}«ENDFOR» else {
+				«IF abstractTypes.value.getDirectPackages(ePackage).size > 0»
+					«abstractTypes.value.getDirectPackages(ePackage).toTryCatch(abstractTypes.value.findRootType.name.toFirstLower)»
+				«ELSE»
+								«'\t'»throw new RuntimeException("Unknow «abstractTypes.value.findRootType.name» " + «abstractTypes.value.findRootType.name.toFirstLower»);
+				«ENDIF»
 				}
 				return ret;
 			}«ENDFOR»
