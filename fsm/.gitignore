@@ -1,6 +1,2 @@
-.*.xtendbin
-**/xtend-gen/
-/*.edit/
-/*.editor/
-/*.tests/
-/cloc/
+bin/
+xtend-gen/
